@@ -2,6 +2,10 @@
 from fastapi import FastAPI, Request
 from routes import voice
 from utils.logger import setup_logging
+import os
+import sys
+import pysqlite3
+sys.modules["sqlite3"]=pysqlite3
 
 # Initialize logging first
 logger = setup_logging()
