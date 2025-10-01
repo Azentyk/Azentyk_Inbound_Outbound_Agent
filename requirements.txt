@@ -18,4 +18,5 @@ itsdangerous
 jinja2
 mysql-connector-python
 pymongo[srv]==3.11
+gunicorn
 twilio
