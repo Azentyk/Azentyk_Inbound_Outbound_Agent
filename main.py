@@ -4,7 +4,7 @@ import sys
 import pysqlite3
 sys.modules["sqlite3"]=pysqlite3
 from fastapi import FastAPI, Request
-from routes import voice
+from voice import *
 from logger import setup_logging
 
 
