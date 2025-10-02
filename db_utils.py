@@ -5,7 +5,7 @@ import pandas as pd
 from pymongo import MongoClient
 import logging
 from typing import Optional, List, Dict,Tuple
-from utils.logger import setup_logging
+from logger import setup_logging
 
 # Initialize MongoDB client
 url = r"mongodb://azentyk-doctor-appointment-app-server:ROtcf6VzE2Jj2Etn0D3QY9LbrSTs4MEgld2hynMw3R46gl8cuL1D70qvx4DjQvogoyBDVO2z1MJxACDb04M0BA==@azentyk-doctor-appointment-app-server.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@azentyk-doctor-appointment-app-server@"
@@ -206,3 +206,4 @@ def update_appointment_status(appointment_id: str,new_status: str,new_date: str 
             "success": False,
             "message": f"No appointment found with ID {appointment_id}"
         }
+
