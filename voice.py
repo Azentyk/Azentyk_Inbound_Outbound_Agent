@@ -2,13 +2,13 @@
 from fastapi import APIRouter, Request, Response, HTTPException
 from twilio.twiml.voice_response import VoiceResponse, Gather
 import uuid, time, random
-from utils.session_manager import conversation_state, user_sessions, cleanup_session
-from services.ai_service import generate_ai_response
-from services.twilio_service import send_sms
-from services.appointment_service import handle_booking_flow, handle_cancel_flow, handle_reschedule_flow
-from utils.date_utils import get_formatted_date
+from session_manager import conversation_state, user_sessions, cleanup_session
+from ai_service import generate_ai_response
+from twilio_service import send_sms
+from appointment_service import handle_booking_flow, handle_cancel_flow, handle_reschedule_flow
+from date_utils import get_formatted_date
 from model import llm_model
-from prompts.prompt import (
+from prompt import (
     doctor_appointment_patient_data_extraction_prompt,
     doctor_appointment_patient_data_extraction__cancel_prompt,
     doctor_appointment_patient_data_extraction__rescheduled_prompt,
@@ -16,7 +16,7 @@ from prompts.prompt import (
 )
 from db_utils import load_users_appointment_details, push_patient_information_data_to_db, push_patient_chat_data_to_db, load_users_df
 from config import PUBLIC_URL, VOICE_VOICE
-from utils.logger import setup_logging
+from logger import setup_logging
 
 # Initialize logging first
 logger = setup_logging()
