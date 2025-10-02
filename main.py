@@ -1,7 +1,7 @@
 # app/main.py
 from fastapi import FastAPI, Request
 from routes import voice
-from utils.logger import setup_logging
+from logger import setup_logging
 import os
 import sys
 import pysqlite3
