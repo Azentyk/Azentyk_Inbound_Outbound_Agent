@@ -1,7 +1,7 @@
 # app/services/twilio_service.py
 from twilio.rest import Client
 from config import TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_CALLER_ID
-from utils.logger import setup_logging
+from logger import setup_logging
 
 # Initialize logging first
 logger = setup_logging()
