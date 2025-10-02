@@ -1,12 +1,12 @@
 # app/services/appointment_service.py
 import random, time
-from prompts.prompt import (
+from prompt import (
     doctor_appointment_patient_data_extraction_prompt,
     doctor_appointment_patient_data_extraction__cancel_prompt,
     doctor_appointment_patient_data_extraction__rescheduled_prompt,
 )
 from db_utils import push_patient_information_data_to_db, push_patient_chat_data_to_db, update_appointment_status
-from utils.logger import setup_logging
+from logger import setup_logging
 
 
 
